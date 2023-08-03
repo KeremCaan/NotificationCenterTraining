@@ -13,6 +13,8 @@
 		520A9BBB2A725CD4008D291F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520A9BB92A725CD4008D291F /* Main.storyboard */; };
 		520A9BBD2A725CD5008D291F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520A9BBC2A725CD5008D291F /* Assets.xcassets */; };
 		520A9BC02A725CD5008D291F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520A9BBE2A725CD5008D291F /* LaunchScreen.storyboard */; };
+		520A9BC82A726097008D291F /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A9BC72A726097008D291F /* DecryptViewController.swift */; };
+		52B982B32A784EC600A153B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52B982B22A784EC600A153B5 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		520A9BBC2A725CD5008D291F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520A9BBF2A725CD5008D291F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		520A9BC12A725CD5008D291F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		520A9BC72A726097008D291F /* DecryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B982B32A784EC600A153B5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,32 @@
 		520A9BB22A725CD4008D291F /* NeonAcademyNotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				520A9BCA2A7260C9008D291F /* View */,
 				520A9BB32A725CD4008D291F /* AppDelegate.swift */,
 				520A9BB52A725CD4008D291F /* SceneDelegate.swift */,
-				520A9BB72A725CD4008D291F /* ViewController.swift */,
-				520A9BB92A725CD4008D291F /* Main.storyboard */,
+				520A9BC92A7260AD008D291F /* Controllers */,
 				520A9BBC2A725CD5008D291F /* Assets.xcassets */,
 				520A9BBE2A725CD5008D291F /* LaunchScreen.storyboard */,
 				520A9BC12A725CD5008D291F /* Info.plist */,
 			);
 			path = NeonAcademyNotificationCenter;
+			sourceTree = "<group>";
+		};
+		520A9BC92A7260AD008D291F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				520A9BC72A726097008D291F /* DecryptViewController.swift */,
+				520A9BB72A725CD4008D291F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		520A9BCA2A7260C9008D291F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				520A9BB92A725CD4008D291F /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,9 @@
 			dependencies = (
 			);
 			name = NeonAcademyNotificationCenter;
+			packageProductDependencies = (
+				52B982B22A784EC600A153B5 /* SnapKit */,
+			);
 			productName = NeonAcademyNotificationCenter;
 			productReference = 520A9BB02A725CD4008D291F /* NeonAcademyNotificationCenter.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 520A9BA72A725CD4008D291F;
+			packageReferences = (
+				52B982B12A784EC600A153B5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 520A9BB12A725CD4008D291F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520A9BC82A726097008D291F /* DecryptViewController.swift in Sources */,
 				520A9BB82A725CD4008D291F /* ViewController.swift in Sources */,
 				520A9BB42A725CD4008D291F /* AppDelegate.swift in Sources */,
 				520A9BB62A725CD4008D291F /* SceneDelegate.swift in Sources */,
@@ -356,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52B982B12A784EC600A153B5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52B982B22A784EC600A153B5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52B982B12A784EC600A153B5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 520A9BA82A725CD4008D291F /* Project object */;
 }
